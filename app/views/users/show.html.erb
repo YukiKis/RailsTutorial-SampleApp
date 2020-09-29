@@ -1,0 +1,11 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user-info">
+      <h1>
+        <%= attachment_image_tag @user, :image, :fill, 30, 30, fallback: "rails.png", size: "30x30" %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
