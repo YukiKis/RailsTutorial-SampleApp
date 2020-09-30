@@ -8,10 +8,10 @@ class SessionHelperTest < ActionView::TestCase
 
   test "current_user returns right user when session is nil" do
     assert_equal @user, current_user
-    asert is_logged_in?
+    assert is_logged_in?
   end
 
-  tes "current_user return snil when remember digest is wrong" do 
+  test "current_user return snil when remember digest is wrong" do 
     @user.update_attribute(:remember_digest, User.digest(User.new_token))
     assert_nil current_user
   end
